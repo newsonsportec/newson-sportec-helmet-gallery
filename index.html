@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Newson Sportec Helmet Concepts</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0b0b0d;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .hero {
+      min-height: 100vh;
+      background:
+        linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.88)),
+        url("1.png");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .logo {
+      width: 260px;
+      max-width: 80%;
+      margin-bottom: 30px;
+      filter: drop-shadow(0 0 20px rgba(255, 75, 20, 0.4));
+    }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 6vw, 5.5rem);
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 span {
+      color: #ff3b1f;
+    }
+
+    .hero p {
+      max-width: 850px;
+      font-size: 1.25rem;
+      color: #d8d8d8;
+      margin-bottom: 35px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn {
+      text-decoration: none;
+      color: #ffffff;
+      border: 2px solid #ff3b1f;
+      padding: 14px 28px;
+      border-radius: 40px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: 0.3s ease;
+    }
+
+    .btn.primary {
+      background: #ff3b1f;
+    }
+
+    .btn:hover {
+      background: #ffffff;
+      color: #111111;
+      border-color: #ffffff;
+      transform: translateY(-3px);
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(8, 8, 10, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    nav {
+      max-width: 1300px;
+      margin: auto;
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav img {
+      width: 150px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff3b1f;
+    }
+
+    section {
+      padding: 90px 24px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(2rem, 5vw, 4rem);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+
+    .section-title p {
+      color: #bdbdbd;
+      margin-top: 12px;
+      font-size: 1.15rem;
+    }
+
+    .intro {
+      background: #111115;
+    }
+
+    .intro-box {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 26px;
+    }
+
+    .feature {
+      background: linear-gradient(145deg, #18181d, #0f0f12);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 32px;
+      border-radius: 22px;
+      text-align: center;
+    }
+
+    .feature h3 {
+      color: #ff3b1f;
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .feature p {
+      color: #cfcfcf;
+    }
+
+    .gallery {
+      background: #0b0b0d;
+    }
+
+    .helmet-grid {
+      max-width: 1400px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .helmet-card {
+      background: #151519;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 18px 50px rgba(0,0,0,0.35);
+      transition: 0.35s ease;
+    }
+
+    .helmet-card:hover {
+      transform: translateY(-10px);
+      border-color: rgba(255, 59, 31, 0.65);
+      box-shadow: 0 22px 70px rgba(255, 59, 31, 0.16);
+    }
+
+    .helmet-card img {
+      width: 100%;
+      display: block;
+      background: #eeeeee;
+    }
+
+    .helmet-content {
+      padding: 24px;
+    }
+
+    .helmet-content h3 {
+      font-size: 1.45rem;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .helmet-content h3 span {
+      color: #ff3b1f;
+    }
+
+    .helmet-content p {
+      color: #c9c9c9;
+      margin-bottom: 18px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag {
+      background: rgba(255, 59, 31, 0.12);
+      color: #ff6a4f;
+      border: 1px solid rgba(255, 59, 31, 0.35);
+      padding: 6px 12px;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .showcase {
+      background:
+        linear-gradient(rgba(10,10,12,0.9), rgba(10,10,12,0.96)),
+        url("9.png");
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+    }
+
+    .showcase-content {
+      max-width: 950px;
+      margin: auto;
+    }
+
+    .showcase h2 {
+      font-size: clamp(2rem, 5vw, 4.5rem);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .showcase h2 span {
+      color: #ff3b1f;
+    }
+
+    .showcase p {
+      color: #dddddd;
+      font-size: 1.2rem;
+      margin-bottom: 35px;
+    }
+
+    .specs {
+      background: #111115;
+    }
+
+    .spec-grid {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .spec-item {
+      padding: 28px;
+      border-radius: 18px;
+      background: #19191e;
+      border: 1px solid rgba(255,255,255,0.08);
+      text-align: center;
+    }
+
+    .spec-item strong {
+      display: block;
+      font-size: 2rem;
+      color: #ff3b1f;
+      margin-bottom: 8px;
+    }
+
+    .spec-item span {
+      color: #cccccc;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+    }
+
+    footer {
+      background: #050506;
+      padding: 45px 24px;
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    footer img {
+      width: 180px;
+      margin-bottom: 18px;
+    }
+
+    footer p {
+      color: #bdbdbd;
+      font-size: 0.95rem;
+    }
+
+    .copyright {
+      margin-top: 18px;
+      color: #777777;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 1000px) {
+      .helmet-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .intro-box,
+      .spec-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 680px) {
+      nav {
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      nav ul {
+        gap: 16px;
+      }
+
+      .helmet-grid,
+      .intro-box,
+      .spec-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        letter-spacing: 2px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <a href="#home">
+        <img src="logo.png" alt="Newson Sportec Logo" />
+      </a>
+
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#concepts">Helmets</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#brand">Brand</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero" id="home">
+      <img class="logo" src="logo.png" alt="Newson Sportec Logo" />
+
+      <h1>Helmet <span>Concept Gallery</span></h1>
+
+      <p>
+        Explore nine premium Newson Sportec motocross helmet concepts designed for
+        speed, protection, ventilation, comfort, and race-ready performance.
+      </p>
+
+      <div class="hero-buttons">
+        <a class="btn primary" href="#concepts">View Concepts</a>
+        <a class="btn" href="#features">Explore Features</a>
+      </div>
+    </section>
+
+    <section class="intro" id="features">
+      <div class="section-title">
+        <h2>Built for Performance</h2>
+        <p>Modern off-road helmet concepts with aggressive style and premium race identity.</p>
+      </div>
+
+      <div class="intro-box">
+        <div class="feature">
+          <h3>Advanced Venting</h3>
+          <p>Large airflow openings and sculpted intake areas create a race-focused helmet look.</p>
+        </div>
+
+        <div class="feature">
+          <h3>Lightweight Shell</h3>
+          <p>Sharp shell geometry gives each helmet a strong, fast, and technical appearance.</p>
+        </div>
+
+        <div class="feature">
+          <h3>Race Ready</h3>
+          <p>Bold graphics, premium colorways, and Newson Sportec branding create a professional racing image.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery" id="concepts">
+      <div class="section-title">
+        <h2>9 Helmet Concepts</h2>
+        <p>Each design direction gives Newson Sportec a different racing personality.</p>
+      </div>
+
+      <div class="helmet-grid">
+
+        <article class="helmet-card">
+          <img src="1.png" alt="Newson Sportec Helmet Concept 1" />
+          <div class="helmet-content">
+            <h3>Concept <span>01</span></h3>
+            <p>Turquoise, white, and orange design with strong futuristic motocross energy.</p>
+            <div class="tags">
+              <span class="tag">Futuristic</span>
+              <span class="tag">Bold Color</span>
+              <span class="tag">MX Style</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="helmet-card">
+          <img src="2.png" alt="Newson Sportec Helmet Concept 2" />
+          <div class="helmet-content">
+            <h3>Concept <span>02</span></h3>
+            <p>Black and white premium helmet design with clean racing graphics.</p>
+            <div class="tags">
+              <span class="tag">Premium</span>
+              <span class="tag">Clean</span>
+              <span class="tag">Race Ready</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="helmet-card">
+          <img src="3.png" alt="Newson Sportec Helmet Concept 3" />
+          <div class="helmet-content">
+            <h3>Concept <span>03</span></h3>
+            <p>Teal, black, white, and red layout with modern performance branding.</p>
+            <div class="tags">
+              <span class="tag">Modern</span>
+              <span class="tag">Performance</span>
+              <span class="tag">Sporty</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="helmet-card">
+          <img src="4.png" alt="Newson Sportec Helmet Concept 4" />
+          <div class="helmet-content">
+            <h3>Concept <span>04</span></h3>
+            <p>Matte black helmet with neon yellow racing highlights for high visibility.</p>
+            <div class="tags">
+              <span class="tag">Neon</span>
+              <span class="tag">Aggressive</span>
+              <span class="tag">High Impact</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="helmet-card">
+          <img src="5.png" alt="Newson Sportec Helmet Concept 5" />
+          <div class="helmet-content">
+            <h3>Concept <span>05</span></h3>
+            <p>White, red, and black off-road helmet design with a clean factory-racing look.</p>
+            <div class="tags">
+              <span class="tag">Factory</span>
+              <span class="tag">Off Road</span>
+              <span class="tag">Sharp</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="helmet-card">
+          <img src="6.png" alt="Newson Sportec Helmet Concept 6" />
+          <div class="helmet-content">
+            <h3>Concept <span>06</span></h3>
+            <p>Red, blue, and white design inspired by Taiwan racing spirit and speed.</p>
+            <div class="tags">
+              <span class="tag">Taiwan</span>
+              <span class="tag">Patriotic</span>
+              <span class="tag">Dynamic</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="helmet-card">
+          <img src="7.png" alt="Newson Sportec Helmet Concept 7" />
+          <div class="helmet-content">
+            <h3>Concept <span>07</span></h3>
+            <p>Black shell with red and blue graphics for a strong night-racing identity.</p>
+            <div class="tags">
+              <span class="tag">Dark</span>
+              <span class="tag">Powerful</span>
+              <span class="tag">Sportec</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="helmet-card">
+          <img src="8.png" alt="Newson Sportec Helmet Concept 8" />
+          <div class="helmet-content">
+            <h3>Concept <span>08</span></h3>
+            <p>White, blue, and red pro-series helmet with clean competition styling.</p>
+            <div class="tags">
+              <span class="tag">Pro Series</span>
+              <span class="tag">Clean White</span>
+              <span class="tag">Fast</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="helmet-card">
+          <img src="9.png" alt="Newson Sportec Helmet Concept 9" />
+          <div class="helmet-content">
+            <h3>Concept <span>09</span></h3>
+            <p>Black and red premium race helmet with strong aggressive body lines.</p>
+            <div class="tags">
+              <span class="tag">Premium</span>
+              <span class="tag">Race Helmet</span>
+              <span class="tag">Aggressive</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="specs">
+      <div class="section-title">
+        <h2>Concept Highlights</h2>
+        <p>Designed around motocross identity, premium visual detail, and Newson Sportec branding.</p>
+      </div>
+
+      <div class="spec-grid">
+        <div class="spec-item">
+          <strong>9</strong>
+          <span>Helmet Concepts</span>
+        </div>
+
+        <div class="spec-item">
+          <strong>MX</strong>
+          <span>Off-Road Style</span>
+        </div>
+
+        <div class="spec-item">
+          <strong>NS</strong>
+          <span>Brand Identity</span>
+        </div>
+
+        <div class="spec-item">
+          <strong>100%</strong>
+          <span>Race Energy</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="showcase" id="brand">
+      <div class="showcase-content">
+        <h2>Ride. Build. <span>Perform.</span></h2>
+        <p>
+          Newson Sportec helmet concepts combine motorsport styling, aggressive graphics,
+          strong airflow details, and premium brand presentation for off-road riders.
+        </p>
+
+        <a class="btn primary" href="#concepts">Back to Gallery</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <img src="logo.png" alt="Newson Sportec Logo" />
+    <p>Newson Sportec Helmet Concept Gallery</p>
+    <p class="copyright">
+      © 2026 Newson Sportec. This website is for concept presentation, personal learning, and demonstration only.
+    </p>
+  </footer>
+
+</body>
+</html>
