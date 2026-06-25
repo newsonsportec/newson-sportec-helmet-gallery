@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Newson Sportec Helmet Concepts</title>
 
   <style>
@@ -12,6 +13,10 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, Helvetica, sans-serif;
       background: #0b0b0d;
@@ -19,10 +24,82 @@
       line-height: 1.6;
     }
 
-    html {
-      scroll-behavior: smooth;
+    /* HEADER */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(8, 8, 10, 0.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
     }
 
+    nav {
+      max-width: 1400px;
+      margin: auto;
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+
+    nav img {
+      width: 150px;
+      display: block;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .nav-links a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      transition: 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #ff3b1f;
+    }
+
+    .header-socials {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .social-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 0.78rem;
+      border: 1px solid rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.06);
+      transition: 0.3s ease;
+    }
+
+    .social-icon:hover {
+      background: #ff3b1f;
+      border-color: #ff3b1f;
+      transform: translateY(-3px);
+    }
+
+    /* HERO */
     .hero {
       min-height: 100vh;
       background:
@@ -35,11 +112,11 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 40px 20px;
+      padding: 60px 20px;
     }
 
-    .logo {
-      width: 260px;
+    .hero-logo {
+      width: 280px;
       max-width: 80%;
       margin-bottom: 30px;
       filter: drop-shadow(0 0 20px rgba(255, 75, 20, 0.4));
@@ -68,6 +145,7 @@
       gap: 18px;
       flex-wrap: wrap;
       justify-content: center;
+      margin-bottom: 28px;
     }
 
     .btn {
@@ -93,49 +171,32 @@
       transform: translateY(-3px);
     }
 
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: rgba(8, 8, 10, 0.92);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-
-    nav {
-      max-width: 1300px;
-      margin: auto;
-      padding: 14px 24px;
+    .hero-socials {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    nav img {
-      width: 150px;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 28px;
-      flex-wrap: wrap;
+      gap: 14px;
       justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 10px;
     }
 
-    nav a {
+    .hero-socials a {
       color: #ffffff;
       text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.3);
+      padding: 10px 18px;
+      border-radius: 30px;
       font-weight: bold;
-      font-size: 0.95rem;
-      text-transform: uppercase;
-      transition: 0.3s;
+      transition: 0.3s ease;
+      background: rgba(255,255,255,0.07);
     }
 
-    nav a:hover {
-      color: #ff3b1f;
+    .hero-socials a:hover {
+      background: #ff3b1f;
+      border-color: #ff3b1f;
+      transform: translateY(-3px);
     }
 
+    /* GENERAL SECTION */
     section {
       padding: 90px 24px;
     }
@@ -157,6 +218,7 @@
       font-size: 1.15rem;
     }
 
+    /* INTRO FEATURES */
     .intro {
       background: #111115;
     }
@@ -175,6 +237,12 @@
       padding: 32px;
       border-radius: 22px;
       text-align: center;
+      transition: 0.3s ease;
+    }
+
+    .feature:hover {
+      transform: translateY(-8px);
+      border-color: rgba(255, 59, 31, 0.5);
     }
 
     .feature h3 {
@@ -188,6 +256,7 @@
       color: #cfcfcf;
     }
 
+    /* GALLERY */
     .gallery {
       background: #0b0b0d;
     }
@@ -257,9 +326,51 @@
       text-transform: uppercase;
     }
 
+    /* SPECS */
+    .specs {
+      background: #111115;
+    }
+
+    .spec-grid {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .spec-item {
+      padding: 28px;
+      border-radius: 18px;
+      background: #19191e;
+      border: 1px solid rgba(255,255,255,0.08);
+      text-align: center;
+      transition: 0.3s ease;
+    }
+
+    .spec-item:hover {
+      transform: translateY(-8px);
+      border-color: rgba(255, 59, 31, 0.5);
+    }
+
+    .spec-item strong {
+      display: block;
+      font-size: 2rem;
+      color: #ff3b1f;
+      margin-bottom: 8px;
+    }
+
+    .spec-item span {
+      color: #cccccc;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+    }
+
+    /* BRAND SHOWCASE */
     .showcase {
       background:
-        linear-gradient(rgba(10,10,12,0.9), rgba(10,10,12,0.96)),
+        linear-gradient(rgba(10,10,12,0.88), rgba(10,10,12,0.96)),
         url("9.png");
       background-size: cover;
       background-position: center;
@@ -287,55 +398,72 @@
       margin-bottom: 35px;
     }
 
-    .specs {
-      background: #111115;
+    .social-section {
+      margin-top: 35px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
     }
 
-    .spec-grid {
-      max-width: 1100px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 22px;
-    }
-
-    .spec-item {
-      padding: 28px;
-      border-radius: 18px;
-      background: #19191e;
-      border: 1px solid rgba(255,255,255,0.08);
-      text-align: center;
-    }
-
-    .spec-item strong {
-      display: block;
-      font-size: 2rem;
-      color: #ff3b1f;
-      margin-bottom: 8px;
-    }
-
-    .spec-item span {
-      color: #cccccc;
+    .social-button {
+      text-decoration: none;
+      color: #ffffff;
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 13px 24px;
+      border-radius: 40px;
+      font-weight: bold;
       text-transform: uppercase;
-      font-size: 0.9rem;
-      letter-spacing: 1px;
+      transition: 0.3s ease;
+      background: rgba(255,255,255,0.06);
     }
 
+    .social-button:hover {
+      background: #ff3b1f;
+      border-color: #ff3b1f;
+      transform: translateY(-4px);
+    }
+
+    /* FOOTER */
     footer {
       background: #050506;
-      padding: 45px 24px;
+      padding: 50px 24px;
       text-align: center;
       border-top: 1px solid rgba(255,255,255,0.08);
     }
 
     footer img {
-      width: 180px;
-      margin-bottom: 18px;
+      width: 190px;
+      margin-bottom: 20px;
     }
 
     footer p {
       color: #bdbdbd;
       font-size: 0.95rem;
+    }
+
+    .footer-socials {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin: 24px 0;
+    }
+
+    .footer-socials a {
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: 30px;
+      border: 1px solid rgba(255,255,255,0.24);
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    .footer-socials a:hover {
+      background: #ff3b1f;
+      border-color: #ff3b1f;
+      transform: translateY(-3px);
     }
 
     .copyright {
@@ -344,7 +472,12 @@
       font-size: 0.85rem;
     }
 
-    @media (max-width: 1000px) {
+    /* RESPONSIVE */
+    @media (max-width: 1100px) {
+      nav {
+        flex-direction: column;
+      }
+
       .helmet-grid {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -356,12 +489,7 @@
     }
 
     @media (max-width: 680px) {
-      nav {
-        flex-direction: column;
-        gap: 14px;
-      }
-
-      nav ul {
+      .nav-links {
         gap: 16px;
       }
 
@@ -373,6 +501,18 @@
 
       .hero h1 {
         letter-spacing: 2px;
+      }
+
+      .hero-socials a,
+      .social-button,
+      .footer-socials a {
+        width: 100%;
+        max-width: 280px;
+      }
+
+      .header-socials {
+        flex-wrap: wrap;
+        justify-content: center;
       }
     }
   </style>
@@ -386,19 +526,27 @@
         <img src="logo.png" alt="Newson Sportec Logo" />
       </a>
 
-      <ul>
+      <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#concepts">Helmets</a></li>
         <li><a href="#features">Features</a></li>
         <li><a href="#brand">Brand</a></li>
+        <li><a href="#social">Social</a></li>
       </ul>
+
+      <div class="header-socials">
+        <a class="social-icon" href="https://www.instagram.com/newsonsportec/?hl=en" target="_blank" rel="noopener">IG</a>
+        <a class="social-icon" href="https://www.facebook.com/Newsonsportecnews" target="_blank" rel="noopener">FB</a>
+        <a class="social-icon" href="https://www.linkedin.com/company/111531327/admin/dashboard/" target="_blank" rel="noopener">IN</a>
+        <a class="social-icon" href="https://www.pinterest.com/NEWSONSPORTECPRPODUCTS/" target="_blank" rel="noopener">PIN</a>
+      </div>
     </nav>
   </header>
 
   <main>
 
     <section class="hero" id="home">
-      <img class="logo" src="logo.png" alt="Newson Sportec Logo" />
+      <img class="hero-logo" src="logo.png" alt="Newson Sportec Logo" />
 
       <h1>Helmet <span>Concept Gallery</span></h1>
 
@@ -410,6 +558,13 @@
       <div class="hero-buttons">
         <a class="btn primary" href="#concepts">View Concepts</a>
         <a class="btn" href="#features">Explore Features</a>
+      </div>
+
+      <div class="hero-socials">
+        <a href="https://www.instagram.com/newsonsportec/?hl=en" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/Newsonsportecnews" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.linkedin.com/company/111531327/admin/dashboard/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.pinterest.com/NEWSONSPORTECPRPODUCTS/" target="_blank" rel="noopener">Pinterest</a>
       </div>
     </section>
 
@@ -597,6 +752,7 @@
     <section class="showcase" id="brand">
       <div class="showcase-content">
         <h2>Ride. Build. <span>Perform.</span></h2>
+
         <p>
           Newson Sportec helmet concepts combine motorsport styling, aggressive graphics,
           strong airflow details, and premium brand presentation for off-road riders.
@@ -606,11 +762,45 @@
       </div>
     </section>
 
+    <section class="intro" id="social">
+      <div class="section-title">
+        <h2>Follow Newson Sportec</h2>
+        <p>Connect with Newson Sportec on social media for more product concepts, racing ideas, and brand updates.</p>
+      </div>
+
+      <div class="social-section">
+        <a class="social-button" href="https://www.instagram.com/newsonsportec/?hl=en" target="_blank" rel="noopener">
+          Instagram
+        </a>
+
+        <a class="social-button" href="https://www.facebook.com/Newsonsportecnews" target="_blank" rel="noopener">
+          Facebook
+        </a>
+
+        <a class="social-button" href="https://www.linkedin.com/company/111531327/admin/dashboard/" target="_blank" rel="noopener">
+          LinkedIn
+        </a>
+
+        <a class="social-button" href="https://www.pinterest.com/NEWSONSPORTECPRPODUCTS/" target="_blank" rel="noopener">
+          Pinterest
+        </a>
+      </div>
+    </section>
+
   </main>
 
   <footer>
     <img src="logo.png" alt="Newson Sportec Logo" />
+
     <p>Newson Sportec Helmet Concept Gallery</p>
+
+    <div class="footer-socials">
+      <a href="https://www.instagram.com/newsonsportec/?hl=en" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/Newsonsportecnews" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.linkedin.com/company/111531327/admin/dashboard/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.pinterest.com/NEWSONSPORTECPRPODUCTS/" target="_blank" rel="noopener">Pinterest</a>
+    </div>
+
     <p class="copyright">
       © 2026 Newson Sportec. This website is for concept presentation, personal learning, and demonstration only.
     </p>
