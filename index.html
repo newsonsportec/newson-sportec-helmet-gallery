@@ -117,7 +117,7 @@
       align-items: center;
       text-align: center;
       background:
-        linear-gradient(rgba(0,0,0,0.74), rgba(0,0,0,0.92)),
+        linear-gradient(rgba(0,0,0,0.76), rgba(0,0,0,0.93)),
         url("24.png");
       background-size: cover;
       background-position: center;
@@ -125,6 +125,24 @@
 
     .hero-content {
       max-width: 1200px;
+    }
+
+    .video-box {
+      max-width: 780px;
+      margin: 0 auto 55px;
+      border-radius: 30px;
+      overflow: hidden;
+      border: 1px solid rgba(255,122,0,0.45);
+      box-shadow:
+        0 0 35px rgba(255,122,0,0.22),
+        0 25px 80px rgba(0,0,0,0.75);
+      background: #000000;
+    }
+
+    .logo-video {
+      width: 100%;
+      display: block;
+      background: #000000;
     }
 
     .hero h1 {
@@ -206,6 +224,35 @@
 
     .intro {
       background: #111116;
+    }
+
+    .motion-intro {
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+      background: linear-gradient(145deg, #191920, #0d0d10);
+      border: 1px solid rgba(255,122,0,0.26);
+      border-radius: 32px;
+      padding: 55px 38px;
+      box-shadow: 0 20px 70px rgba(0,0,0,0.42);
+    }
+
+    .motion-intro h2 {
+      font-size: clamp(2.3rem, 5vw, 4.5rem);
+      text-transform: uppercase;
+      line-height: 1.15;
+      margin-bottom: 24px;
+    }
+
+    .motion-intro h2 span {
+      color: #ff7a00;
+    }
+
+    .motion-intro p {
+      color: #d8d8d8;
+      font-size: 1.25rem;
+      max-width: 1000px;
+      margin: auto;
     }
 
     .feature-grid {
@@ -512,7 +559,7 @@
   <header>
     <nav>
       <a class="logo-link" href="#home" aria-label="Newson Sportec Home">
-        <img class="site-logo" src="logoR.png" alt="Newson Sportec 3D Logo" />
+        <img class="site-logo" src="logoR.png" alt="Newson Sportec Logo" />
       </a>
 
       <ul class="nav-links">
@@ -537,22 +584,41 @@
     <section class="hero" id="home">
       <div class="hero-content">
 
-        <h1>Helmet <span>Concept Gallery</span></h1>
+        <div class="video-box">
+          <video class="logo-video" autoplay muted loop playsinline controls>
+            <source src="nlogo.MP4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <h1>Motion <span>Logo Showcase</span></h1>
 
         <p>
-          Explore 24 Newson Sportec dirt bike helmet concepts featuring carbon design,
-          American flag colors, futuristic shapes, premium vents, bold colorways,
-          and dog-mascot motocross style.
+          Newson Sportec presents a bold watercolor-style animated logo built with
+          orange-and-black racing energy, premium motorsport identity, and a powerful
+          visual style for website branding and social media promotion.
         </p>
 
         <div class="hero-buttons">
-          <a class="btn primary" href="#concepts">View All Helmets</a>
-          <a class="btn" href="#features">Explore Features</a>
+          <a class="btn primary" href="#concepts">View Helmet Gallery</a>
+          <a class="btn" href="#features">Explore Brand Story</a>
         </div>
       </div>
     </section>
 
     <section class="intro" id="features">
+      <div class="motion-intro">
+        <h2>Newson Sportec <span>Brand Motion</span></h2>
+        <p>
+          This motion logo introduces the Newson Sportec identity with a strong,
+          artistic, and performance-driven look. The watercolor texture adds creativity,
+          while the sharp orange-and-black emblem communicates speed, strength, and
+          modern motocross style.
+        </p>
+      </div>
+    </section>
+
+    <section class="intro">
       <div class="section-title">
         <h2>Built for <span>Motocross Identity</span></h2>
         <p>
@@ -563,18 +629,18 @@
 
       <div class="feature-grid">
         <div class="feature-card">
-          <h3>24 Concepts</h3>
+          <h3>Motion Branding</h3>
+          <p>The animated logo gives the website a stronger opening and a premium product-launch feeling.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Helmet Concepts</h3>
           <p>All helmet images are displayed together in one clean website gallery.</p>
         </div>
 
         <div class="feature-card">
-          <h3>Carbon & Color</h3>
-          <p>Carbon texture, American flag colorways, bright racing styles, and premium brand presentation.</p>
-        </div>
-
-        <div class="feature-card">
-          <h3>Dog Mascots</h3>
-          <p>Husky, Bulldog, German Shepherd, and Doberman graphics add speed, power, loyalty, and futuristic identity.</p>
+          <h3>Motocross Energy</h3>
+          <p>Orange, black, carbon texture, dog mascots, and racing graphics build a powerful Newson Sportec identity.</p>
         </div>
       </div>
     </section>
@@ -591,11 +657,7 @@
           <div class="helmet-content">
             <h3>Concept <span>01</span></h3>
             <p>Teal, coral red, white, and black motocross helmet with distressed racing graphics and bold Newson Sportec logo placement.</p>
-            <div class="tags">
-              <span class="tag">Teal</span>
-              <span class="tag">Coral Red</span>
-              <span class="tag">Distressed</span>
-            </div>
+            <div class="tags"><span class="tag">Teal</span><span class="tag">Coral Red</span><span class="tag">Distressed</span></div>
           </div>
         </article>
 
@@ -604,11 +666,7 @@
           <div class="helmet-content">
             <h3>Concept <span>02</span></h3>
             <p>Black, white, and gray/silver helmet concept with a clean monochrome racing style and large Newson Sportec side branding.</p>
-            <div class="tags">
-              <span class="tag">Black White</span>
-              <span class="tag">Monochrome</span>
-              <span class="tag">Clean</span>
-            </div>
+            <div class="tags"><span class="tag">Black White</span><span class="tag">Monochrome</span><span class="tag">Clean</span></div>
           </div>
         </article>
 
@@ -617,11 +675,7 @@
           <div class="helmet-content">
             <h3>Concept <span>03</span></h3>
             <p>Teal, black, and white motocross helmet with small red accents, sharp panel graphics, and a modern performance look.</p>
-            <div class="tags">
-              <span class="tag">3R Only</span>
-              <span class="tag">Teal</span>
-              <span class="tag">Modern</span>
-            </div>
+            <div class="tags"><span class="tag">3R Only</span><span class="tag">Teal</span><span class="tag">Modern</span></div>
           </div>
         </article>
 
@@ -630,11 +684,7 @@
           <div class="helmet-content">
             <h3>Concept <span>04</span></h3>
             <p>Matte black helmet with neon yellow and white racing graphics, aggressive vents, and a high-visibility motocross style.</p>
-            <div class="tags">
-              <span class="tag">Matte Black</span>
-              <span class="tag">Neon Yellow</span>
-              <span class="tag">Aggressive</span>
-            </div>
+            <div class="tags"><span class="tag">Matte Black</span><span class="tag">Neon Yellow</span><span class="tag">Aggressive</span></div>
           </div>
         </article>
 
@@ -643,11 +693,7 @@
           <div class="helmet-content">
             <h3>Concept <span>05</span></h3>
             <p>White, black, and red off-road helmet with carbon-style dark side panels, clean racing graphics, and strong Newson Sportec branding.</p>
-            <div class="tags">
-              <span class="tag">White Black</span>
-              <span class="tag">Red</span>
-              <span class="tag">Factory Style</span>
-            </div>
+            <div class="tags"><span class="tag">White Black</span><span class="tag">Red</span><span class="tag">Factory Style</span></div>
           </div>
         </article>
 
@@ -656,11 +702,7 @@
           <div class="helmet-content">
             <h3>Concept <span>06</span></h3>
             <p>Red, white, and blue helmet with Taiwan-inspired racing graphics, bold brushstroke styling, and strong side logo visibility.</p>
-            <div class="tags">
-              <span class="tag">Red White Blue</span>
-              <span class="tag">Taiwan</span>
-              <span class="tag">Dynamic</span>
-            </div>
+            <div class="tags"><span class="tag">Red White Blue</span><span class="tag">Taiwan</span><span class="tag">Dynamic</span></div>
           </div>
         </article>
 
@@ -669,11 +711,7 @@
           <div class="helmet-content">
             <h3>Concept <span>07</span></h3>
             <p>Black helmet with red and blue racing graphics, rugged splatter details, and a strong night-racing Newson Sportec identity.</p>
-            <div class="tags">
-              <span class="tag">Black</span>
-              <span class="tag">Red Blue</span>
-              <span class="tag">Night Race</span>
-            </div>
+            <div class="tags"><span class="tag">Black</span><span class="tag">Red Blue</span><span class="tag">Night Race</span></div>
           </div>
         </article>
 
@@ -682,11 +720,7 @@
           <div class="helmet-content">
             <h3>Concept <span>08</span></h3>
             <p>White helmet with navy blue and red competition graphics, clean panel layout, and a professional race-series appearance.</p>
-            <div class="tags">
-              <span class="tag">White</span>
-              <span class="tag">Navy Red</span>
-              <span class="tag">Pro Series</span>
-            </div>
+            <div class="tags"><span class="tag">White</span><span class="tag">Navy Red</span><span class="tag">Pro Series</span></div>
           </div>
         </article>
 
@@ -695,11 +729,7 @@
           <div class="helmet-content">
             <h3>Concept <span>09</span></h3>
             <p>Black helmet with red, white, gray, and small blue accents, designed with sharp race lines and a premium aggressive profile.</p>
-            <div class="tags">
-              <span class="tag">Black Red</span>
-              <span class="tag">Gray White</span>
-              <span class="tag">Premium</span>
-            </div>
+            <div class="tags"><span class="tag">Black Red</span><span class="tag">Gray White</span><span class="tag">Premium</span></div>
           </div>
         </article>
 
@@ -708,11 +738,7 @@
           <div class="helmet-content">
             <h3>Concept <span>10</span></h3>
             <p>White, rose red/pink, black, and gold helmet concept with luxury-style trim, smooth side panels, and polished Newson Sportec branding.</p>
-            <div class="tags">
-              <span class="tag">Rose Red</span>
-              <span class="tag">Gold</span>
-              <span class="tag">Luxury</span>
-            </div>
+            <div class="tags"><span class="tag">Rose Red</span><span class="tag">Gold</span><span class="tag">Luxury</span></div>
           </div>
         </article>
 
@@ -721,11 +747,7 @@
           <div class="helmet-content">
             <h3>Concept <span>11</span></h3>
             <p>Teal, orange, white, and black helmet with energetic racing graphics, orange splatter details, and a bold Newson Sportec side plate.</p>
-            <div class="tags">
-              <span class="tag">Teal</span>
-              <span class="tag">Orange</span>
-              <span class="tag">Racing</span>
-            </div>
+            <div class="tags"><span class="tag">Teal</span><span class="tag">Orange</span><span class="tag">Racing</span></div>
           </div>
         </article>
 
@@ -734,11 +756,7 @@
           <div class="helmet-content">
             <h3>Concept <span>12</span></h3>
             <p>Teal, coral/salmon, white, and black motocross helmet with clean angular graphics, speckled texture, and bright interior accents.</p>
-            <div class="tags">
-              <span class="tag">Teal</span>
-              <span class="tag">Coral</span>
-              <span class="tag">Speckled</span>
-            </div>
+            <div class="tags"><span class="tag">Teal</span><span class="tag">Coral</span><span class="tag">Speckled</span></div>
           </div>
         </article>
 
@@ -747,11 +765,7 @@
           <div class="helmet-content">
             <h3>Concept <span>13</span></h3>
             <p>Red, yellow, blue, white, and black helmet with armor-like geometric panels, deep vents, and a powerful mechanical race look.</p>
-            <div class="tags">
-              <span class="tag">Red Yellow</span>
-              <span class="tag">Blue</span>
-              <span class="tag">Armor</span>
-            </div>
+            <div class="tags"><span class="tag">Red Yellow</span><span class="tag">Blue</span><span class="tag">Armor</span></div>
           </div>
         </article>
 
@@ -760,11 +774,7 @@
           <div class="helmet-content">
             <h3>Concept <span>14</span></h3>
             <p>Lime green, purple, white, black, and silver/gray helmet design with bold color separation, sporty vents, and clean product-sheet styling.</p>
-            <div class="tags">
-              <span class="tag">Lime</span>
-              <span class="tag">Purple</span>
-              <span class="tag">Silver</span>
-            </div>
+            <div class="tags"><span class="tag">Lime</span><span class="tag">Purple</span><span class="tag">Silver</span></div>
           </div>
         </article>
 
@@ -773,11 +783,7 @@
           <div class="helmet-content">
             <h3>Concept <span>15</span></h3>
             <p>Cyan, magenta/pink, white, and black helmet with energetic splatter graphics, rugged vent openings, and high-impact racing style.</p>
-            <div class="tags">
-              <span class="tag">Cyan</span>
-              <span class="tag">Magenta</span>
-              <span class="tag">Splatter</span>
-            </div>
+            <div class="tags"><span class="tag">Cyan</span><span class="tag">Magenta</span><span class="tag">Splatter</span></div>
           </div>
         </article>
 
@@ -786,11 +792,7 @@
           <div class="helmet-content">
             <h3>Concept <span>16</span></h3>
             <p>Pink, cyan, white, and black helmet concept with smooth bright panels, clean Newson Sportec logo placement, and a sporty modern profile.</p>
-            <div class="tags">
-              <span class="tag">Pink</span>
-              <span class="tag">Cyan</span>
-              <span class="tag">Bright</span>
-            </div>
+            <div class="tags"><span class="tag">Pink</span><span class="tag">Cyan</span><span class="tag">Bright</span></div>
           </div>
         </article>
 
@@ -799,11 +801,7 @@
           <div class="helmet-content">
             <h3>Concept <span>17</span></h3>
             <p>Carbon black helmet with American flag red, white, and blue graphics, blue star panels, red-white striping, and a white Newson Sportec side plate.</p>
-            <div class="tags">
-              <span class="tag">Carbon</span>
-              <span class="tag">USA</span>
-              <span class="tag">Stars</span>
-            </div>
+            <div class="tags"><span class="tag">Carbon</span><span class="tag">USA</span><span class="tag">Stars</span></div>
           </div>
         </article>
 
@@ -812,11 +810,7 @@
           <div class="helmet-content">
             <h3>Concept <span>18</span></h3>
             <p>Sleek carbon black helmet with a deep blue star band, long red-white side stripes, and bold Newson Sportec branding.</p>
-            <div class="tags">
-              <span class="tag">Sleek</span>
-              <span class="tag">Carbon</span>
-              <span class="tag">Flag Style</span>
-            </div>
+            <div class="tags"><span class="tag">Sleek</span><span class="tag">Carbon</span><span class="tag">Flag Style</span></div>
           </div>
         </article>
 
@@ -825,11 +819,7 @@
           <div class="helmet-content">
             <h3>Concept <span>19</span></h3>
             <p>Carbon black helmet with bold American flag star-and-stripe panels, red vent accents, and sharp futuristic motocross geometry.</p>
-            <div class="tags">
-              <span class="tag">Carbon</span>
-              <span class="tag">American Flag</span>
-              <span class="tag">Futuristic</span>
-            </div>
+            <div class="tags"><span class="tag">Carbon</span><span class="tag">American Flag</span><span class="tag">Futuristic</span></div>
           </div>
         </article>
 
@@ -838,11 +828,7 @@
           <div class="helmet-content">
             <h3>Concept <span>20</span></h3>
             <p>Carbon black helmet with a large blue star field across the peak, red-white racing stripes, and a clean white Newson Sportec side plate.</p>
-            <div class="tags">
-              <span class="tag">Carbon</span>
-              <span class="tag">Blue Stars</span>
-              <span class="tag">Red White</span>
-            </div>
+            <div class="tags"><span class="tag">Carbon</span><span class="tag">Blue Stars</span><span class="tag">Red White</span></div>
           </div>
         </article>
 
@@ -851,11 +837,7 @@
           <div class="helmet-content">
             <h3>Concept <span>21</span></h3>
             <p>Husky mascot helmet with icy blue, white, black, silver, and neon yellow accents. The sharp husky artwork creates a fast, focused motocross identity.</p>
-            <div class="tags">
-              <span class="tag">Husky</span>
-              <span class="tag">Icy Blue</span>
-              <span class="tag">Speed Focus</span>
-            </div>
+            <div class="tags"><span class="tag">Husky</span><span class="tag">Icy Blue</span><span class="tag">Speed Focus</span></div>
           </div>
         </article>
 
@@ -864,11 +846,7 @@
           <div class="helmet-content">
             <h3>Concept <span>22</span></h3>
             <p>Bulldog mascot helmet with red, black, white, gray, and metallic gold details. The bold bulldog graphic gives this helmet a tough racing personality.</p>
-            <div class="tags">
-              <span class="tag">Bulldog</span>
-              <span class="tag">Red Gold</span>
-              <span class="tag">Aggressive</span>
-            </div>
+            <div class="tags"><span class="tag">Bulldog</span><span class="tag">Red Gold</span><span class="tag">Aggressive</span></div>
           </div>
         </article>
 
@@ -877,11 +855,7 @@
           <div class="helmet-content">
             <h3>Concept <span>23</span></h3>
             <p>German Shepherd mascot helmet with orange, tan, black, white, and teal racing graphics. The fierce shepherd artwork adds guardian style.</p>
-            <div class="tags">
-              <span class="tag">German Shepherd</span>
-              <span class="tag">Orange Tan</span>
-              <span class="tag">Guardian Style</span>
-            </div>
+            <div class="tags"><span class="tag">German Shepherd</span><span class="tag">Orange Tan</span><span class="tag">Guardian Style</span></div>
           </div>
         </article>
 
@@ -890,11 +864,7 @@
           <div class="helmet-content">
             <h3>Concept <span>24</span></h3>
             <p>Doberman mascot helmet with deep purple, black, magenta, cyan, and silver racing graphics. The sleek Doberman design creates a premium futuristic identity.</p>
-            <div class="tags">
-              <span class="tag">Doberman</span>
-              <span class="tag">Purple Magenta</span>
-              <span class="tag">Futuristic</span>
-            </div>
+            <div class="tags"><span class="tag">Doberman</span><span class="tag">Purple Magenta</span><span class="tag">Futuristic</span></div>
           </div>
         </article>
 
@@ -950,7 +920,7 @@
       <div class="section-title">
         <h2>Follow <span>Newson Sportec</span></h2>
         <p>
-          Share these helmet concepts on social media and connect your Newson Sportec brand pages.
+          Share these helmet concepts and the Newson Sportec motion logo on social media.
         </p>
 
         <div class="social-buttons">
@@ -965,9 +935,9 @@
   </main>
 
   <footer>
-    <img src="logoR.png" alt="Newson Sportec 3D Logo" />
+    <img src="logoR.png" alt="Newson Sportec Logo" />
 
-    <p>Newson Sportec Helmet Concept Gallery</p>
+    <p>Newson Sportec Motion Logo & Helmet Concept Gallery</p>
 
     <p class="copyright">
       © 2026 Newson Sportec. This website is for concept presentation, personal learning, and demonstration only.
