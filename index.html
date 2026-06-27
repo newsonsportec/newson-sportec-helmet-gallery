@@ -29,9 +29,9 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(6, 6, 8, 0.96);
+      background: rgba(6, 6, 8, 0.94);
       backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(255,255,255,0.12);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
     }
 
     nav {
@@ -44,164 +44,18 @@
       gap: 32px;
     }
 
-    /* FLASHY LOGO EFFECT */
-    .logo-flash-box {
-      position: relative;
+    .logo-link {
       display: inline-block;
       line-height: 0;
-      overflow: visible;
-      isolation: isolate;
+      text-decoration: none;
     }
 
-    .flash-logo {
+    .site-logo {
       width: 210px;
       display: block;
-      position: relative;
-      z-index: 2;
-      filter:
-        drop-shadow(0 0 10px rgba(255,122,0,0.9))
-        drop-shadow(0 0 24px rgba(255,122,0,0.75))
-        drop-shadow(0 0 42px rgba(255,255,255,0.35));
-      animation: logoPulse 1.15s infinite ease-in-out;
-    }
-
-    .logo-flash-box::before {
-      content: "";
-      position: absolute;
-      inset: -35%;
-      z-index: 3;
-      background: linear-gradient(
-        120deg,
-        transparent 0%,
-        transparent 35%,
-        rgba(255,255,255,0.95) 45%,
-        rgba(255,255,255,0.55) 50%,
-        transparent 62%,
-        transparent 100%
-      );
-      transform: translateX(-125%) rotate(8deg);
-      animation: shineSweep 1.7s infinite ease-in-out;
-      mix-blend-mode: screen;
-      pointer-events: none;
-    }
-
-    .logo-flash-box::after {
-      content: "✦";
-      position: absolute;
-      top: -18px;
-      right: -10px;
-      z-index: 4;
-      color: #ffffff;
-      font-size: 42px;
-      line-height: 1;
-      text-shadow:
-        0 0 8px #ffffff,
-        0 0 18px #ff7a00,
-        0 0 34px #ff7a00;
-      animation: starBlink 0.85s infinite ease-in-out;
-      pointer-events: none;
-    }
-
-    .spark {
-      position: absolute;
-      z-index: 4;
-      color: #ffffff;
-      line-height: 1;
-      pointer-events: none;
-      text-shadow:
-        0 0 8px #ffffff,
-        0 0 18px #ff7a00,
-        0 0 34px #ff7a00;
-      animation: sparklePop 1.4s infinite ease-in-out;
-    }
-
-    .spark.one {
-      left: -16px;
-      top: 30%;
-      font-size: 28px;
-      animation-delay: 0.25s;
-    }
-
-    .spark.two {
-      right: 18px;
-      bottom: -10px;
-      font-size: 24px;
-      animation-delay: 0.65s;
-    }
-
-    .spark.three {
-      left: 45%;
-      top: -18px;
-      font-size: 22px;
-      animation-delay: 1s;
-    }
-
-    @keyframes logoPulse {
-      0%, 100% {
-        transform: scale(1);
-        filter:
-          drop-shadow(0 0 10px rgba(255,122,0,0.9))
-          drop-shadow(0 0 24px rgba(255,122,0,0.75))
-          drop-shadow(0 0 42px rgba(255,255,255,0.35));
-      }
-
-      50% {
-        transform: scale(1.08);
-        filter:
-          drop-shadow(0 0 18px rgba(255,255,255,1))
-          drop-shadow(0 0 36px rgba(255,122,0,1))
-          drop-shadow(0 0 72px rgba(255,122,0,1));
-      }
-    }
-
-    @keyframes shineSweep {
-      0% {
-        transform: translateX(-130%) rotate(8deg);
-        opacity: 0;
-      }
-
-      20% {
-        opacity: 1;
-      }
-
-      55% {
-        transform: translateX(130%) rotate(8deg);
-        opacity: 1;
-      }
-
-      100% {
-        transform: translateX(130%) rotate(8deg);
-        opacity: 0;
-      }
-    }
-
-    @keyframes starBlink {
-      0%, 100% {
-        opacity: 0.2;
-        transform: scale(0.6) rotate(0deg);
-      }
-
-      50% {
-        opacity: 1;
-        transform: scale(1.55) rotate(90deg);
-      }
-    }
-
-    @keyframes sparklePop {
-      0%, 100% {
-        opacity: 0;
-        transform: scale(0.25) rotate(0deg);
-      }
-
-      45% {
-        opacity: 1;
-        transform: scale(1.35) rotate(90deg);
-      }
-
-      65% {
-        opacity: 0.35;
-        transform: scale(0.75) rotate(180deg);
-      }
+      background: transparent;
+      border-radius: 18px;
+      filter: drop-shadow(0 0 10px rgba(255,122,0,0.35));
     }
 
     .nav-links {
@@ -224,7 +78,6 @@
 
     .nav-links a:hover {
       color: #ff7a00;
-      text-shadow: 0 0 16px rgba(255,122,0,0.9);
     }
 
     .socials {
@@ -254,7 +107,6 @@
       background: #ff7a00;
       border-color: #ff7a00;
       transform: translateY(-3px);
-      box-shadow: 0 0 24px rgba(255,122,0,0.75);
     }
 
     .hero {
@@ -275,13 +127,13 @@
       max-width: 1200px;
     }
 
-    .hero-logo-box {
-      margin: 0 auto 35px;
-    }
-
-    .hero-logo-box .flash-logo {
+    .hero-logo {
       width: 360px;
-      max-width: 85vw;
+      max-width: 85%;
+      margin-bottom: 35px;
+      filter:
+        drop-shadow(0 0 22px rgba(255,122,0,0.45))
+        drop-shadow(0 0 45px rgba(255,255,255,0.18));
     }
 
     .hero h1 {
@@ -294,7 +146,6 @@
 
     .hero h1 span {
       color: #ff7a00;
-      text-shadow: 0 0 22px rgba(255,122,0,0.75);
     }
 
     .hero p {
@@ -322,7 +173,6 @@
       text-transform: uppercase;
       letter-spacing: 2px;
       transition: 0.3s ease;
-      box-shadow: 0 0 18px rgba(255,122,0,0.18);
     }
 
     .btn.primary {
@@ -334,7 +184,6 @@
       color: #111111;
       border-color: #ffffff;
       transform: translateY(-4px);
-      box-shadow: 0 0 34px rgba(255,255,255,0.55);
     }
 
     section {
@@ -355,7 +204,6 @@
 
     .section-title h2 span {
       color: #ff7a00;
-      text-shadow: 0 0 18px rgba(255,122,0,0.55);
     }
 
     .section-title p {
@@ -389,7 +237,7 @@
     .feature-card:hover {
       transform: translateY(-8px);
       border-color: rgba(255,122,0,0.6);
-      box-shadow: 0 18px 55px rgba(255,122,0,0.16);
+      box-shadow: 0 18px 55px rgba(255,122,0,0.12);
     }
 
     .feature-card h3 {
@@ -429,7 +277,7 @@
     .helmet-card:hover {
       transform: translateY(-10px);
       border-color: rgba(255,122,0,0.7);
-      box-shadow: 0 24px 70px rgba(255,122,0,0.2);
+      box-shadow: 0 24px 70px rgba(255,122,0,0.16);
     }
 
     .helmet-card img {
@@ -577,7 +425,6 @@
       background: #ff7a00;
       border-color: #ff7a00;
       transform: translateY(-4px);
-      box-shadow: 0 0 24px rgba(255,122,0,0.75);
     }
 
     footer {
@@ -587,12 +434,12 @@
       border-top: 1px solid rgba(255,255,255,0.08);
     }
 
-    .footer-logo-box {
-      margin-bottom: 25px;
-    }
-
-    .footer-logo-box .flash-logo {
+    footer img {
       width: 250px;
+      margin-bottom: 25px;
+      filter:
+        drop-shadow(0 0 16px rgba(255,122,0,0.45))
+        drop-shadow(0 0 32px rgba(255,255,255,0.12));
     }
 
     footer p {
@@ -634,12 +481,8 @@
         padding: 22px;
       }
 
-      .flash-logo {
+      .site-logo {
         width: 185px;
-      }
-
-      .hero-logo-box .flash-logo {
-        width: 290px;
       }
 
       .nav-links {
@@ -677,11 +520,8 @@
 
   <header>
     <nav>
-      <a class="logo-flash-box" href="#home" aria-label="Newson Sportec Home">
-        <img class="flash-logo" src="logoR.png" alt="Newson Sportec 3D Logo" />
-        <span class="spark one">✦</span>
-        <span class="spark two">✧</span>
-        <span class="spark three">✦</span>
+      <a class="logo-link" href="#home" aria-label="Newson Sportec Home">
+        <img class="site-logo" src="logoR.png" alt="Newson Sportec 3D Logo" />
       </a>
 
       <ul class="nav-links">
@@ -705,13 +545,7 @@
 
     <section class="hero" id="home">
       <div class="hero-content">
-
-        <div class="logo-flash-box hero-logo-box">
-          <img class="flash-logo" src="logoR.png" alt="Newson Sportec 3D Logo" />
-          <span class="spark one">✦</span>
-          <span class="spark two">✧</span>
-          <span class="spark three">✦</span>
-        </div>
+        <img class="hero-logo" src="logoR.png" alt="Newson Sportec 3D Logo" />
 
         <h1>Helmet <span>Concept Gallery</span></h1>
 
@@ -779,7 +613,7 @@
           <img src="2.png" alt="Newson Sportec helmet concept 2" />
           <div class="helmet-content">
             <h3>Concept <span>02</span></h3>
-            <p>Black, white, and gray helmet concept with a clean monochrome racing style and large Newson Sportec side branding.</p>
+            <p>Black, white, and gray/silver helmet concept with a clean monochrome racing style and large Newson Sportec side branding.</p>
             <div class="tags">
               <span class="tag">Black White</span>
               <span class="tag">Monochrome</span>
@@ -883,7 +717,7 @@
           <img src="10.png" alt="Newson Sportec helmet concept 10" />
           <div class="helmet-content">
             <h3>Concept <span>10</span></h3>
-            <p>White, rose red, black, and gold helmet concept with luxury-style trim, smooth side panels, and polished Newson Sportec branding.</p>
+            <p>White, rose red/pink, black, and gold helmet concept with luxury-style trim, smooth side panels, and polished Newson Sportec branding.</p>
             <div class="tags">
               <span class="tag">Rose Red</span>
               <span class="tag">Gold</span>
@@ -909,7 +743,7 @@
           <img src="12.png" alt="Newson Sportec helmet concept 12" />
           <div class="helmet-content">
             <h3>Concept <span>12</span></h3>
-            <p>Teal, coral, white, and black motocross helmet with clean angular graphics, speckled texture, and bright interior accents.</p>
+            <p>Teal, coral/salmon, white, and black motocross helmet with clean angular graphics, speckled texture, and bright interior accents.</p>
             <div class="tags">
               <span class="tag">Teal</span>
               <span class="tag">Coral</span>
@@ -935,7 +769,7 @@
           <img src="14.png" alt="Newson Sportec helmet concept 14" />
           <div class="helmet-content">
             <h3>Concept <span>14</span></h3>
-            <p>Lime green, purple, white, black, and silver helmet design with bold color separation, sporty vents, and clean product-sheet styling.</p>
+            <p>Lime green, purple, white, black, and silver/gray helmet design with bold color separation, sporty vents, and clean product-sheet styling.</p>
             <div class="tags">
               <span class="tag">Lime</span>
               <span class="tag">Purple</span>
@@ -948,7 +782,7 @@
           <img src="15.png" alt="Newson Sportec helmet concept 15" />
           <div class="helmet-content">
             <h3>Concept <span>15</span></h3>
-            <p>Cyan, magenta, white, and black helmet with energetic splatter graphics, rugged vent openings, and high-impact racing style.</p>
+            <p>Cyan, magenta/pink, white, and black helmet with energetic splatter graphics, rugged vent openings, and high-impact racing style.</p>
             <div class="tags">
               <span class="tag">Cyan</span>
               <span class="tag">Magenta</span>
@@ -1141,12 +975,7 @@
   </main>
 
   <footer>
-    <div class="logo-flash-box footer-logo-box">
-      <img class="flash-logo" src="logoR.png" alt="Newson Sportec 3D Logo" />
-      <span class="spark one">✦</span>
-      <span class="spark two">✧</span>
-      <span class="spark three">✦</span>
-    </div>
+    <img src="logoR.png" alt="Newson Sportec 3D Logo" />
 
     <p>Newson Sportec Helmet Concept Gallery</p>
 
@@ -1157,6 +986,3 @@
 
 </body>
 </html>
-   
-   
-           
